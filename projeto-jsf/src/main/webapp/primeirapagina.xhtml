@@ -16,10 +16,22 @@
 	
 	<h1>Olá JSF</h1>
 	
-		<h:inputText id="campoNome" value="#{pessoaBean.nome}"> </h:inputText> <br/>
+	    Nome:
+		<h:inputText id="campoNome" value="#{pessoaBean.nome}"/> 
 		
-		<h:outputText value="Teste jsf"/><br/>
-		<h:commandButton value="Botão"/>
+		<br/>
+		
+		Sobrenome:
+		<h:inputText id="sobrenome" value="#{pessoaBean.sobreNome}"/>
+		
+		
+		<br/>
+		Nome Completo:
+			<h:outputText value="#{pessoaBean.nomeCompleto}"/>
+		<br/>
+		
+		<h:commandButton value="Mostrar Nome" action="#{pessoaBean.mostrarNome}"/>
+		
 	</h:form>
 
 </h:body>
