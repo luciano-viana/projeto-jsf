@@ -3,13 +3,31 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html">
 
+<!-- Cabecalho da Pagina -->
 <h:head>
  <title>Olá JSF</title>
 </h:head>
 
+<!-- Corpo da Pagina -->
 <h:body>
-<h1>Minha primeira página JSF</h1>
+
+	<!-- Formulario -->
+	<h:form id="formPessoa">
+	
+	<h1>Olá JSF</h1>
+	
+		<h:inputText id="campoNome" value="#{pessoaBean.nome}"> </h:inputText> <br/>
+		
+		<h:outputText value="Teste jsf"/><br/>
+		<h:commandButton value="Botão"/>
+	</h:form>
 
 </h:body>
 
 </html>
+
+<!-- Principais componentes HTML utilizando junto com o JSF:
+<br/> Para quebra de linha
+<h1, h2....> para texto
+<table/> Tabela para organizar os componentes
+ -->
