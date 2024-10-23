@@ -1,26 +1,31 @@
 package br.com.cursojsf;
 
-import javax.faces.bean.ManagedBean;
+import java.util.ArrayList;
+import java.util.List;
 
-@ManagedBean
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+
+@ManagedBean(name="pessoaBean")
+@RequestScoped
 public class pessoaBean {
 
 	private String nome;
-	private String sobreNome;
-	private String nomeCompleto;
+	
+	private List<String> nomes = new ArrayList<String>();
 
-	//Metodo mostrarNome
-	public String mostrarNome() {
-		nomeCompleto = nome + "" + sobreNome;
+	//Metodo Adicionar Nome
+	public String addNome() {
+		nomes.add(nome);
 		return "";
 	}
-
-	public String getNomeCompleto() {
-		return nomeCompleto;
+	
+	public void setNomes(List<String> nomes) {
+		this.nomes = nomes;
 	}
-
-	public void setNomeCompleto(String nomeCompleto) {
-		this.nomeCompleto = nomeCompleto;
+	
+	public List<String> getNomes() {
+		return nomes;
 	}
 
 	public String getNome() {
@@ -29,14 +34,6 @@ public class pessoaBean {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public String getSobreNome() {
-		return sobreNome;
-	}
-
-	public void setSobreNome(String sobreNome) {
-		this.sobreNome = sobreNome;
 	}
 
 }
