@@ -20,10 +20,7 @@
         <h:inputText id="campoNome" value="#{pessoaBean.nome}"/>
 		
 		
-		
-		<br/>
-		
-		<h:commandButton value="Adicionar Nome" action="#{pessoaBean.addNome}"/>
+		<h:commandButton binding="#{pessoaBean.commandButton}" value="Adicionar Nome" action="#{pessoaBean.addNome}"/>
 		
 		<!-- Utilizado para mostrar lista de dados -->
 		<h:dataTable value="#{pessoaBean.nomes}" var="nome">
