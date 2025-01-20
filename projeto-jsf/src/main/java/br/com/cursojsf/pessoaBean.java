@@ -37,12 +37,13 @@ public class pessoaBean {
 	public String addNome() {
 		nomes.add(nome);
 		
-		if(nomes.size() > (3 - 1)) {
+		if(nomes.size() > 3) {
 			commandButton.setDisabled(true);
+			return "paginanavegada?faces-redirect=true";
 		}
 		
 		
-		return "";
+		return ""; //null ou vazio fica na mesma página -> outcome
 	}
 	
 

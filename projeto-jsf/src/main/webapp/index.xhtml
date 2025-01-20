@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<!-- Cabecalho da Pagina -->
+<h:head>
+ <title>Olá JSF</title>
+ 
+ <script>
+ 	function alterarValorDoCampo(){
+		var campo = document.getElementById('formPessoa:nome');
+		campo.value = 'eu cliquei no campo :)';
+	}
+ </script>
+</h:head>
+
+<!-- Corpo da Pagina -->
+<h:body>
+
+	<!-- Formulario -->
+	<h:form id="formPessoa">
+	
+	<h1>Olá JSF página index.jsf</h1>
+	
+	<h:inputText id="nome"/>
+	<h:commandButton value="Clicar" onclick="alterarValorDoCampo();"/>
+	
+	
+	<br/>
+	<br/>
+	<h:commandButton value="Navegar" action="primeirapagina"/>
+	<br/>
+	<h:commandButton value="Navegar Explicita" action="explicita"/>
+	
+	</h:form>
+
+</h:body>
+
+</html>
+
+<!-- Principais componentes HTML utilizando junto com o JSF:
+<br/> Para quebra de linha
+<h1, h2....> para texto
+<table/> Tabela para organizar os componentes
+ -->
