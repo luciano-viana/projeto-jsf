@@ -28,6 +28,11 @@ import javax.faces.component.html.HtmlCommandButton;
 public class pessoaBean {
 
 	private String nome;
+	
+	private String senha;
+	
+	private String texto;
+	
 
 	private HtmlCommandButton commandButton;
 
@@ -46,6 +51,26 @@ public class pessoaBean {
 		return ""; //null ou vazio fica na mesma página -> outcome
 	}
 	
+
+	public String getSenha() {
+		return senha;
+	}
+
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+
+	public String getTexto() {
+		return texto;
+	}
+
+
+	public void setTexto(String texto) {
+		this.texto = texto;
+	}
+
 
 	public void setCommandButton(HtmlCommandButton commandButton) {
 		this.commandButton = commandButton;

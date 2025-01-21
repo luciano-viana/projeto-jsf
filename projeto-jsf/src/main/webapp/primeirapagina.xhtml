@@ -18,9 +18,19 @@
 	
 	    Nome:
         <h:inputText id="campoNome" value="#{pessoaBean.nome}"/>
-		
+        
+        <br/>
+        Senha:
+        <h:inputSecret id="senha" value="#{pessoaBean.senha}"/>
+        <br/>
+        
+        Caixa de Texto:
+        <br/>
+        <h:inputTextarea id="texto" value="#{pessoaBean.texto}" rows="10" cols="27"/>
+		<br/>
 		
 		<h:commandButton binding="#{pessoaBean.commandButton}" value="Adicionar Nome" action="#{pessoaBean.addNome}"/>
+		<br/>
 		
 		<!-- Utilizado para mostrar lista de dados -->
 		<h:dataTable value="#{pessoaBean.nomes}" var="nome">

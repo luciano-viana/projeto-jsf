@@ -6,13 +6,6 @@
 <!-- Cabecalho da Pagina -->
 <h:head>
  <title>Olá JSF</title>
- 
- <script>
- 	function alterarValorDoCampo(){
-		var campo = document.getElementById('formPessoa:nome');
-		campo.value = 'eu cliquei no campo :)';
-	}
- </script>
 </h:head>
 
 <!-- Corpo da Pagina -->
@@ -21,18 +14,14 @@
 	<!-- Formulario -->
 	<h:form id="formPessoa">
 	
-	<h1>Olá JSF página index.jsf</h1>
+	<h1>Olá JSF2</h1>
 	
-	<h:inputText id="nome" onclick="this.value='troquei o valor'" onchange="this.value = this.value.toUpperCase();"/>
-	<h:commandButton value="Clicar" onclick="alterarValorDoCampo();"/>
-	
-	
-	<br/>
-	<br/>
-	<h:commandButton value="Navegar" action="primeirapagina"/>
-	<br/>
-	<h:commandButton value="Navegar Explicita" action="explicita"/>
-	
+		<h:outputText value="Saida de texto"/> <!-- Saída de Texto, utilizado para mostrar os dados -->
+		
+		<br/>
+		<h:outputLabel value="Nome:" for="camponome"/> <!-- É para indicar uma Label, qual função dessa entrada de texto, para que server os campos de entrada -->
+		<h:inputText id="camponome" value="#{pessoaBean.nome}"/> <!-- Utilizado para gravar os dados -->
+		
 	</h:form>
 
 </h:body>
